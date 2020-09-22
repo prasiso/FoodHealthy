@@ -1,0 +1,75 @@
+/*cores*/ /*opções de cores para cabeçalho # b4e4b4 # 9fdf9f # 9ae59a # ccccb3 # b3e0ff #008000 #009900  #ded0b4  #d8c8a6 #ccffcc #9999ff #b3b3ff*/
+.bg-light{background-color:#ffffffdd !important }
+.bg-nav{background-color: grey}
+ 
+
+/*conteudo*/
+
+.left { float: left}
+.right{ float: right}
+
+header{ 
+    background-color:    #ffffffdd;
+}  
+
+header{
+
+height: 100%;
+min-height: 250px; 
+
+
+}
+
+
+nav{
+    background-color: #00b252;
+}
+
+
+
+
+body{
+    background-color: #ffffffdd;
+}
+
+.carouselExampleControls{
+
+    padding: 40px;
+     height: 30%; 
+    
+}
+
+.card{
+margin: 10px ;
+background-color: #98e698;
+}
+
+footer{
+
+    background-color: #00b252 ;
+    min-height: 100px;
+    
+
+}
+
+.form2{
+    
+    margin: 5%;
+    
+}
+
+
+a{ 
+    color: black;
+}
+
+.atendimento{
+ 
+    
+    padding: 45px;
+}
+
+input{
+
+    border-radius: 5px; 
+}
