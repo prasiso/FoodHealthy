@@ -18,18 +18,19 @@
   <div class="vertical-center">
     <div id="login">
       <img src="./img/login_logo.png" alt="" >
-      <form>
+      <form action="" >
         <div class="form-group">
           <label for="exampleInputEmail1" class="text-white">Email</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
             placeholder="Email">
         </div>
-        <div class="form-group">
+        <div class="form-group" >
           <label for="exampleInputPassword1" class="text-white">Senha</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
         <a href=""></a>
         <button type="submit" class="btn btn-success" id="env">Enviar</button>
+
       </form>
     </div>
   </div>
@@ -45,5 +46,11 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
 </body>
+
+<?php 
+ 
+
+
+?>
 
 </html>
