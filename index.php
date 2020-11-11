@@ -37,6 +37,14 @@ include_once("config.php");
                     $p = "pages/page-sobremesa.php";
                 };
                 break;
+            case "card": {
+                    $p = "pages/page-card.php";
+                };
+                break;
+            case "culinaria": {
+                    $p = "pages/page-culinaria-vegana.php";
+                };
+                break;
             default:
                 $p = "pages/page-home.php";
         }

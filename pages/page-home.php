@@ -8,7 +8,7 @@
           </ol>
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
-              <a href="culináriavegana.html"> 
+              <a href="index.php?p=culinaria"> 
               <img src="img2/vegano.jpeg" class="d-block w-100 " alt="...">
               </a>
               <div class="carousel-caption d-none d-md-block ">
@@ -17,7 +17,7 @@
               </div>
             </div>
             <div class="carousel-item"> 
-              <a href="culináriavegana.html"> 
+              <a href="index.php?p=culinaria"> 
               <img src="img2/vegetariana.jpeg" class="d-block w-100" alt="...">
               </a>
               <div class="carousel-caption d-none d-md-block">
@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <a href="culináriavegana.html"> 
+              <a href="index.php?p=culinaria"> 
               <img src="img2/grade2.png" class="d-block w-100" alt="...">
               </a>
               <div class="carousel-caption d-none d-md-block">
@@ -57,7 +57,7 @@
           <p class="card-text">Os sucos de fruta energizam e limpam o organismo. Eles são ricos em açúcares naturais e,
             por isso, devem ser ingeridos apenas em pequenas quantidades por pessoas que necessitam limitar o consumo do
             açúcar.</p>
-          <a href="card1.html" class="btn btn-primary">Ver as opções</a>
+          <a href="index.php?p=card" class="btn btn-primary">Ver as opções</a>
         </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
             ricos em nutrientes que melhoram o funcionamento do intestino e do fígado. Além disso, esses sucos têm ação
             antioxidante, ajudando a fortalecer o sistema imunológico e são ricos em fibras, que melhoram o trânsito
             intestinal.</p>
-          <a href="card1.html" class="btn btn-primary">Ver as opções</a>
+          <a href="index.php?p=card" class="btn btn-primary">Ver as opções</a>
         </div>
         </div>
   
@@ -83,7 +83,7 @@
           <p class="card-text">As vitaminas de leite com frutas podem equivaler a uma refeição em termos nutricionais
             quando combinadas com aveia e outros ingredientes. Além disso, elas são uma ótima opção para o café da manhã e
             o lanche da tarde.</p>
-          <a href="card1.html" class="btn btn-primary">Ver as opções</a>
+          <a href="index.php?p=card" class="btn btn-primary">Ver as opções</a>
         </div>
       </div>
       </div>
@@ -100,7 +100,7 @@
             </ol>
             <div class="carousel-inner rounded-top">
               <div class="carousel-item active">
-                <a href="sobremesa0gordura.html"> 
+                <a href="index.php?p=sobremesa"> 
                 <img src="img2/gordura0.jfif" class="d-block w-100 " alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block ">
@@ -109,7 +109,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="sobremesa0gordura.html"> 
+                <a href="index.php?p=sobremesa"> 
                 <img src="img2/flan sem gluten.jfif" class="d-block w-100" alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
@@ -118,7 +118,7 @@
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="sobremesa0gordura.html"> 
+                <a href="index.php?p=sobremesa"> 
                 <img src="img2/sem lactose.jfif" class="d-block w-100" alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
