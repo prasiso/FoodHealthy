@@ -1,6 +1,5 @@
-body {
-    background-image: url("../img/fundo_login.jpg");
-
+#back-login {
+background-image:url("../img/fundo_login.jpg")
 }
 
 .vertical-center {
@@ -10,19 +9,18 @@ body {
     width: 80%;
     display: flex;
     align-items: center;
-    
+
 }
 
 #login {
-    
+
     background-color: rgb(34, 139, 34, 0.85);
     border-radius: 5%;
     box-shadow: 0 0 1em black;
-    padding: 5%;
-    
+    padding: 1% 2%;
+
 }
 
 #env {
     box-shadow: 0 0 0.2em black;
 }
- 

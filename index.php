@@ -10,6 +10,7 @@ include_once("config.php");
     <title>FoodHealthy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -43,6 +44,14 @@ include_once("config.php");
                 break;
             case "culinaria": {
                     $p = "pages/page-culinaria-vegana.php";
+                };
+                break;
+            case "login": {
+                    $p = "pages/page-login.php";
+                };
+                break;
+            case "cadastro": {
+                    $p = "pages/page-cadastro-login.php";
                 };
                 break;
             default:

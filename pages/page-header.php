@@ -39,6 +39,7 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                 </li>
+                <a href="index.php?p=login"> <button class="btn btn-outline-success my-2 my-sm-0" style="color: #ffffffdd" type="submit">Login</button></a>
             </ul>
 
         </div>
