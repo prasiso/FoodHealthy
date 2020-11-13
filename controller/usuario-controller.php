@@ -15,7 +15,7 @@
 //}
 //}
 require_once("./models/usuario.php");
-require_once("./pages/message.php");
+require_once("./pages/page-message.php");
 $usuario = new Usuario;
 
 if(!empty($_POST))
@@ -30,7 +30,7 @@ if(!empty($_POST))
         break;
         
         default:
-            echo "<script> window.location.href = 'http://localhost/phpSchool/index.php';</script>";
+            echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php';</script>";
         break;
     }
 
