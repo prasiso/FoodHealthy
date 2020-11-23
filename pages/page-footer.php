@@ -12,7 +12,6 @@
                 <!-- Content -->
                 <h5 class="text-uppercase">Nossa Empresa</h5>
                 <p>Aqui você pode escolher seu prato de acordo com o que você gosta de comer e sem restrição de comidas . Essa empresa é voltada para comidas orgânicas, vegetarianas, veganas. Nosso trabalho visa aumentar as opções de pratos alimentares para pessoas que sentem carencia no mercado.</p>
-                <p> Trabalhamos com entrega domiciliar apenas e qualquer dúvida de atendimento ligue para nós: <a href="">33457698</a> </a></p>
             </div>
             <!-- Grid column -->
 
@@ -26,44 +25,12 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="index(ouvidoria).html">Ouvidoria</a>
-                    </li>
-                    <li>
-                        <a href="indexATEN.html">Atendimento</a>
-                    </li>
-                    <li>
-                        <a href="indexPP.html">Políticas e Privacidade</a>
-                    </li>
-                    <li>
-                        <a href="indexPP.html">Nossa história</a>
+                        <a href="index.php?p=form">Envia a sua Mensagem</a>
                     </li>
                 </ul>
 
             </div>
             <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-                <!-- Links -->
-                <h5 class="text-uppercase">Dúvidas</h5>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="indexPP.html">Processo de entrega</a>
-                    </li>
-
-                    <li>
-                        <a href="indexPP.html"> Cancelamento</a>
-                    </li>
-                    <li>
-                        <a href="indexPP.html">Serviços de entrega</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- Grid column -->
-
         </div>
         <!-- Grid row -->
 

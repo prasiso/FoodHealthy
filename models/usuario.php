@@ -1,7 +1,8 @@
 <?php
 require_once("./dao/conecta.php");
 
-class Usuario{
+class Usuario
+{
 
     public $nome;
     public $email;
@@ -10,43 +11,42 @@ class Usuario{
     public $datanasc;
     public $ativo = true;
 
-    public function valida($conf){
-        $error = ""; 
-        if ($this->nome == ""){
+    public function valida($conf)
+    {
+        $error = "";
+        if ($this->nome == "") {
             $error .= "Nome em branco.<br>";
         }
 
-        if ($this->email == ""){
+        if ($this->email == "") {
             $error .= "E-mail em branco.<br>";
-        }  
-        else if(!strstr($this->email,"@") && !strstr($this->email,".")  ){
+        } else if (!strstr($this->email, "@") && !strstr($this->email, ".")) {
             $error .= "E-mail invalido.<br>";
         }
 
-        if ($this->tel == ""){
+        if ($this->tel == "") {
             $error .= "Telefone em branco.<br>";
         }
 
-        if ($this->pws == ""){
+        if ($this->pws == "") {
             $error .= "Senha em branco.<br>";
-        } 
-        else if(strlen($this->pws) < 6) {
+        } else if (strlen($this->pws) < 6) {
             $error .= "Senha senha muito curta! Minimo de 6 caracteres.<br>";
-        }
-        else if($this->pws != $conf) {
+        } else if ($this->pws != $conf) {
             $error .= "Senhas diferentes.<br>";
         }
 
-        if ($error != ""){
+        if ($error != "") {
             throw new Exception($error);
             return false;
         }
 
-        return true;       
+        return true;
     }
 
 
-    public function login($email, $senha){
+    public function login($email, $senha)
+    {
         try {
             $pass = md5($senha, $email);
             $dao = new DAO;
@@ -57,13 +57,14 @@ class Usuario{
             $stman->execute();
             $result = $stman->fetchAll();
             return $result;
-        }catch(Exception $e){
+        } catch (Exception $e) {
             throw new Exception("Erro ao Entrar:", $e->getMessage());
         }
     }
 
-    public function salvar(){
-        try{
+    public function salvar()
+    {
+        try {
             $date = date("Y-m-d", strtotime($this->datanasc));
             //$pass = crypt($this->pws, $this->email);
             $pass = md5($this->pws, $this->email);
@@ -74,12 +75,24 @@ class Usuario{
             $stman->bindParam(":email", $this->email);
             $stman->bindParam(":tel", $this->tel);
             $stman->bindParam(":ativo", $this->ativo);
-            $stman->bindParam(":datanasc",$date);
-            $stman->bindParam(":senha",$pass);
+            $stman->bindParam(":datanasc", $date);
+            $stman->bindParam(":senha", $pass);
             $stman->execute();
-        }catch(Exception $e){
+        } catch (Exception $e) {
             throw new Exception("Erro ao Cadastrar:", $e->getMessage());
         }
     }
-    
+    /* public function validar()
+    {
+        $this->emailValida = "SELECT email FROM usuario WHERE emailValida = :email";
+        $this->nomeValida = "SELECT nome FROM usuario WHERE nomeValida = :nome";
+        if ($this->nomeValida == $this->nome) {
+        alerta("Nome já Cadastrado");
+        }
+        if ($this->emailValida == $this->email) {
+        alerta("E-mail já Cadastrado");
+        } else {
+            $this->salvar();
+        }
+    } */
 }

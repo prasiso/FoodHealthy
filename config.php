@@ -18,4 +18,3 @@ define("PORT","3306");
 define("USER","root");
 define("PASS","");
 define("DB","food_healthy");
-

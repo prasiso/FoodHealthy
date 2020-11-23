@@ -38,10 +38,6 @@ include_once("config.php");
                     $p = "pages/page-sobremesa.php";
                 };
                 break;
-            case "card": {
-                    $p = "pages/page-card.php";
-                };
-                break;
             case "culinaria": {
                     $p = "pages/page-culinaria-vegana.php";
                 };
@@ -52,6 +48,18 @@ include_once("config.php");
                 break;
             case "cadastro": {
                     $p = "pages/page-cadastro-login.php";
+                };
+                break;
+            case "form": {
+                    $p = "pages/page-form.php";
+                };
+                break;
+            case "dash-user": {
+                    $p = "pages/pages-dashboard/page-dashboard-usuario.php";
+                };
+                break;
+            case "dash-cadastro": {
+                    $p = "pages/pages-dashboard/page-dashboard-cadastro.php";
                 };
                 break;
             default:

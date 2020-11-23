@@ -19,7 +19,6 @@ require_once("./controller/usuario-controller.php");
                     <small id="pwsHelp" class="form-text text-muted"></small>
                 </div>
                 <button type="submit" class="btn btn-success">Enviar</button>
-                <a href="index.php?p=cadastro" class="btn btn-outline-success my-2 my-sm-0" style="color: #ffffffdd">Cadastrar</a>
             </form>
         </div>
     </div>

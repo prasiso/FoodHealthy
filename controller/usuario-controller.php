@@ -4,7 +4,7 @@
 //$login = new login;
 //$login->email = $_POST['email'];
 //$login->password = $_POST['password'];
-    
+
 //try{
 //$login->valida();
 //$login->salvar();
@@ -18,26 +18,26 @@ require_once("./models/usuario.php");
 require_once("./pages/page-message.php");
 $usuario = new Usuario;
 
-if(!empty($_POST))
-{
+if (!empty($_POST)) {
     switch ($_POST["action"]) {
         case "cad":
             cadastro();
-        break;
+            break;
 
         case "log":
             entrar();
-        break;
-        
+            break;
+
         default:
             echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php';</script>";
-        break;
+            break;
     }
-
 }
+/* function validar(){
 
+} */
 function cadastro()
-{       
+{
     $usuario = new Usuario;
     $usuario->nome = $_POST['nome'];
     $usuario->email = $_POST['email'];
@@ -45,17 +45,16 @@ function cadastro()
     $usuario->pws = $_POST['pws'];
     $usuario->datanasc = $_POST['datanasc'];
     $confpws = $_POST['confpws'];
-    try{
+    try {
         $usuario->valida($confpws);
         $usuario->salvar();
-        aviso("Cadastrado com sucesso!");
+        alerta("Usuario já Cadastrado");
         $usuario = new Usuario;
         echo "<script> this.form.reset();</script>";
         //echo "<script> window.location.href = 'http://localhost/phpSchool/index.php';</script>";
-        //header("Location: http://localhost/phpSchool/index.php");
-    } catch(Exception $erro){
-    error($erro->getMessage());
-    }   
+    } catch (Exception $erro) {
+        error($erro->getMessage());
+    }
 }
 
 function entrar()
@@ -63,14 +62,21 @@ function entrar()
     $usuario = new Usuario;
     $email = $_POST['email'];
     $pws = $_POST['pws'];
-    try{
+    try {
         $result = $usuario->login($email, $pws);
-        var_dump($result);
-        //echo "<script> window.location.href = 'http://localhost/phpSchool/index.php';</script>";
+        session_start();
+        if ($result) {
+            $usuario = new Usuario;
+            $usuario = $result;
+            var_dump($usuario);
+            $_SESSION["user"] = $usuario;
+            var_dump($result);
+            echo "<script> window.location.href = 'http://localhost/http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
+        } else {
+            session_destroy();
+        }
         //header("Location: http://localhost/phpSchool/index.php");
-    } catch(Exception $erro){
-    error($erro->getMessage());
-    }   
+    } catch (Exception $erro) {
+        error($erro->getMessage());
+    }
 }
-
-?>

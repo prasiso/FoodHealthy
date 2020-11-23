@@ -1,68 +1,189 @@
-<section class="container">
+<?php
+require_once("./controller/produto-controller.php");
+?>
+<h1>Sucos Naturais</h1>
+<div class="container">
     <div class="row">
-        <div class="col-md-4 col-12">
-            <div class="card ">
-                <img src="img2/suco da fruta 2.jfif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sucos da fruta</h5>
-                    <p class="card-text">
-
-
-                        <form action="/action_page.php">
-                            <select class="rounded-top rounded-bottom" name="sucos">
-                                <option value="laranja">Suco de Laranja e Acerola</option>
-                                <option value="Melancia">Melancia</option>
-                                <option value="Limão">Limão</option>
-                                <option value="Maracuja">Maracuja</option>
-                                <option value="Goiaba">Goiaba</option>
-                            </select>
-                            <input type="submit" value="Submit">
-                        </form>
-
+        <?php for ($x = 0; $x < sizeof($produtos); $x++) if ($produtos[$x]['tipo_produto'] == "fruta") { ?>
+            <div class="col-md-4 col-12">
+                <div class="card ">
+                    <img src='<?= $produtos[$x]['imagem'] ?>?text= Imagem Indisponivel' class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $produtos[$x]['nome'] ?></h5>
+                        <p class="card-text">
+                            R$<?= $produtos[$x]['valor'] ?> </p>
+                        <button class="btn btn-primary btn-lg float-left" data-toggle="modal" data-target="#mymodal<?= $produtos[$x]['id_produto'] ?>">Mais detalhes</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 col-12">
-            <div class="card ">
-                <img src="img2/suco detox.jpeg " class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sucos detox</h5>
-                    <p class="card-text">
-
-                        <form action="/action_page.php">
-                            <select class="rounded-top rounded-bottom" name="sucos">
-                                <option value="laranja">Suco de Laranja e Acerola</option>
-                                <option value="Melancia">Melancia</option>
-                                <option value="Limão">Limão</option>
-                                <option value="Maracuja">Maracuja</option>
-                                <option value="Goiaba">Goiaba</option>
-                            </select>
-                            <input type="submit" value="Submit">
-                        </form>
-
+            </tr>
+            <div class='modal fade bd-example-modal-lg' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mymodal<?= $produtos[$x]['id_produto'] ?>">
+                <div class='modal-dialog modal-dialog-centered modal-dialog modal-lg' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title' id='exampleModalLongTitle'>Detalhes do Produto</h5>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                <span aria-hidden='true'>&times;</span>
+                            </button>
+                        </div>
+                        <div class='modal-body w-100'>
+                            <div class='container-fluid'>
+                                <div class='row'>
+                                    <div class='col-md-7'>
+                                        <img src='<?= $produtos[$x]['imagem'] ?>?text= Imagem Indisponivel' alt='' class='w-100'>
+                                    </div>
+                                    <div class='col-md-5'>
+                                        <div class='col-md-12'>
+                                            <h2><?= $produtos[$x]['nome'] ?></h2>
+                                        </div>
+                                        <br>
+                                        <div class='col-md-12'>
+                                            <h3>Tipo de produto:</h3>
+                                            <h4 class='text-secondary'><?= $produtos[$x]['tipo_produto'] ?></h4>
+                                        </div>
+                                        <div class='col-md-12'>
+                                            <h3>Valor:</h3>
+                                            <h4 class='text-secondary'>R$<?= $produtos[$x]['valor'] ?></h4>
+                                        </div>
+                                        <br>
+                                        <div class='col-md-12'>
+                                            <h3>Descrição:</h3>
+                                            <p class='text-secondary'><?= $produtos[$x]['descricao'] ?></p>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        </div>
-        <div class="col-md-4 col-12">
-            <div class="card ">
-                <img src="img2/suco de beterraba.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Vitaminas de fruta</h5>
-                    <p class="card-text">
-
-                        <form action="/action_page.php">
-                            <select class="rounded-top rounded-bottom" name="sucos">
-                                <option value="laranja">Suco de Laranja e Acerola</option>
-                                <option value="Melancia">Melancia</option>
-                                <option value="Limão">Limão</option>
-                                <option value="Maracuja">Maracuja</option>
-                                <option value="Goiaba">Goiaba</option>
-                            </select>
-                            <input type="submit" value="Submit">
-                        </form>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
     </div>
-</section>
+</div>
+
+<hr>
+
+<h1>Sucos Detox</h1>
+<div class="container">
+    <div class="row">
+        <?php for ($x = 0; $x < sizeof($produtos); $x++) if ($produtos[$x]['tipo_produto'] == "detox") { ?>
+            <div class="col-md-4 col-12">
+                <div class="card ">
+                    <img src='<?= $produtos[$x]['imagem'] ?>?text= Imagem Indisponivel' class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $produtos[$x]['nome'] ?></h5>
+                        <p class="card-text">
+                            R$<?= $produtos[$x]['valor'] ?> </p>
+                        <button class="btn btn-primary btn-lg float-left" data-toggle="modal" data-target="#mymodal<?= $produtos[$x]['id_produto'] ?>">Mais detalhes</button>
+                    </div>
+                </div>
+            </div>
+            </tr>
+            <div class='modal fade bd-example-modal-lg' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mymodal<?= $produtos[$x]['id_produto'] ?>">
+                <div class='modal-dialog modal-dialog-centered modal-dialog modal-lg' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title' id='exampleModalLongTitle'>Detalhes do Produto</h5>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                <span aria-hidden='true'>&times;</span>
+                            </button>
+                        </div>
+                        <div class='modal-body w-100'>
+                            <div class='container-fluid'>
+                                <div class='row'>
+                                    <div class='col-md-7'>
+                                        <img src='<?= $produtos[$x]['imagem'] ?>?text= Imagem Indisponivel' alt='' class='w-100'>
+                                    </div>
+                                    <div class='col-md-5'>
+                                        <div class='col-md-12'>
+                                            <h2><?= $produtos[$x]['nome'] ?></h2>
+                                        </div>
+                                        <br>
+                                        <div class='col-md-12'>
+                                            <h3>Tipo de produto:</h3>
+                                            <h4 class='text-secondary'><?= $produtos[$x]['tipo_produto'] ?></h4>
+                                        </div>
+                                        <div class='col-md-12'>
+                                            <h3>Valor:</h3>
+                                            <h4 class='text-secondary'>R$<?= $produtos[$x]['valor'] ?></h4>
+                                        </div>
+                                        <br>
+                                        <div class='col-md-12'>
+                                            <h3>Descrição:</h3>
+                                            <p class='text-secondary'><?= $produtos[$x]['descricao'] ?></p>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+<hr>
+
+<h1>Vitaminas de Frutas</h1>
+<div class="container">
+    <div class="row">
+        <?php for ($x = 0; $x < sizeof($produtos); $x++) if ($produtos[$x]['tipo_produto'] == "vitamina") { ?>
+            <div class="col-md-4 col-12">
+                <div class="card ">
+                    <img src='<?= $produtos[$x]['imagem'] ?>?text= Imagem Indisponivel' class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $produtos[$x]['nome'] ?></h5>
+                        <p class="card-text">
+                            R$<?= $produtos[$x]['valor'] ?> </p>
+                        <button class="btn btn-primary btn-lg float-left" data-toggle="modal" data-target="#mymodal<?= $produtos[$x]['id_produto'] ?>">Mais detalhes</button>
+                    </div>
+                </div>
+            </div>
+            </tr>
+            <div class='modal fade bd-example-modal-lg' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mymodal<?= $produtos[$x]['id_produto'] ?>">
+                <div class='modal-dialog modal-dialog-centered modal-dialog modal-lg' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title' id='exampleModalLongTitle'>Detalhes do Produto</h5>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                <span aria-hidden='true'>&times;</span>
+                            </button>
+                        </div>
+                        <div class='modal-body w-100'>
+                            <div class='container-fluid'>
+                                <div class='row'>
+                                    <div class='col-md-7'>
+                                        <img src='<?= $produtos[$x]['imagem'] ?>?text= Imagem Indisponivel' alt='' class='w-100'>
+                                    </div>
+                                    <div class='col-md-5'>
+                                        <div class='col-md-12'>
+                                            <h2><?= $produtos[$x]['nome'] ?></h2>
+                                        </div>
+                                        <br>
+                                        <div class='col-md-12'>
+                                            <h3>Tipo de produto:</h3>
+                                            <h4 class='text-secondary'><?= $produtos[$x]['tipo_produto'] ?></h4>
+                                        </div>
+                                        <div class='col-md-12'>
+                                            <h3>Valor:</h3>
+                                            <h4 class='text-secondary'>R$<?= $produtos[$x]['valor'] ?></h4>
+                                        </div>
+                                        <br>
+                                        <div class='col-md-12'>
+                                            <h3>Descrição:</h3>
+                                            <p class='text-secondary'><?= $produtos[$x]['descricao'] ?></p>
+                                        </div>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
