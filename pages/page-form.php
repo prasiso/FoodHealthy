@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row align-items-center">
         <div class="col-12">
-            <form id="form1" name="form1" method="post" action="controller/form-controller.php">
+            <form id="form1" name="form1" method="post" action="pages/enviarEmail.php">
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">

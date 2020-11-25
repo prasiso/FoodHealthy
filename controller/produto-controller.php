@@ -2,11 +2,20 @@
 require_once("./models/produto.php");
 require_once("./pages/page-message.php");
 $produto = new Produto;
-if (!empty($_GET)) {
-    switch ($_GET["action"]) {
-        case "Action":
-            $produtos = listarTodos();
+if (!empty($_POST)) {
+    switch ($_POST["action"]) {
+        case "cadastro":
+            cadastro();
             break;
+    }
+}
+if (!empty($_GET)) {
+    if (isset($_GET["action"])) {
+        switch ($_GET["action"]) {
+            case "list":
+                $produtos = listarTodos();
+                break;
+        }
     }
 }
 function cadastro()

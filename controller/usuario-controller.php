@@ -64,14 +64,11 @@ function entrar()
     $pws = $_POST['pws'];
     try {
         $result = $usuario->login($email, $pws);
+        var_dump($email, $pws);
         session_start();
         if ($result) {
-            $usuario = new Usuario;
-            $usuario = $result;
-            var_dump($usuario);
-            $_SESSION["user"] = $usuario;
-            var_dump($result);
-            echo "<script> window.location.href = 'http://localhost/http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
+            $_SESSION["user"] = $result;
+            echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
         } else {
             session_destroy();
         }

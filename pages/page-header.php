@@ -21,13 +21,13 @@
                     <a class="nav-link" href="index.php?p=inicio">Início<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?p=bebidas&action=Action">Bebidas<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php?p=bebidas&action=list">Bebidas<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?p=prato&action=Action">Monte seu prato<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php?p=prato&action=list">Monte seu prato<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php?p=sobremesa&action=Action">Sobremesa<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php?p=sobremesa&action=list">Sobremesa<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

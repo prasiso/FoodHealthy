@@ -3,20 +3,20 @@ require_once("./controller/usuario-controller.php");
 include_once("./pages/valida-user.php");
 ?>
 <div class="row">
-    <div class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+    <div class="col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1" style="background-color: rgba(0,178,82);">
         <nav class="nav navbar-light navbar-toggleable-sm">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarWEX" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarWEX" aria-controls="navbarSupportedContent" style="background-color: white;" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
             </button>
             <div class="navbar-collapse collapse flex-column mt-md-0 mt-4 pt-md-0 pt-4" id="navbarWEX">
                 <a class="nav-link navbar-brand active" href="~/Views/Forms/ControlPanel.cshtml"><span class="fa fa-home"></span></a>
-                <a href="index.php?p=dash-user" class="nav-link">Usuario</a>
-                <a href="index.php?p=dash-cadastro" class="nav-link">Cadastro</a>
+                <a href="index.php?p=dash-user" class="nav-link text-white">Usuario</a>
+                <a href="index.php?p=dash-cadastro" class="nav-link text-white">Cadastro</a>
             </div>
         </nav>
     </div>
     <div class="col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11">
-        <form action="" method="POST">
+        <form action="" method="POST" class="container-fluid">
             <input type="hidden" name="action" value="cad">
             <div class="form-group">
                 <label for="exampleInputNome">Nome</label>

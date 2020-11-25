@@ -45,15 +45,15 @@ class Usuario
     }
 
 
-    public function login($email, $senha)
+    public function login($pws, $email)
     {
         try {
-            $pass = md5($senha, $email);
+            $pass = md5($pws, $email);
             $dao = new DAO;
-            $sql = "SELECT id, nome, email FROM usuario WHERE email = :email AND pws = :senha ";
+            $sql = "SELECT * FROM usuario WHERE email = :email AND pws = :senha ";
             $stman = $dao->conecta()->prepare($sql);
-            $stman->bindParam(":senha", $pass);
             $stman->bindParam(":email", $email);
+            $stman->bindParam(":senha", $pass);
             $stman->execute();
             $result = $stman->fetchAll();
             return $result;
