@@ -30,11 +30,25 @@
                     <a class="nav-link" href="index.php?p=sobremesa&action=list">Sobremesa<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+
+            <?php 
+            if (isset($_SESSION['user'])){
+               // var_dump($_SESSION['user']);
+            ?>
+
             <ul class="navbar-nav ml-auto">
+                <a href="index.php?p=login"> <button class="btn btn-outline-success my-2 my-sm-0" style="color: #ffffffdd" type="submit"><?= $_SESSION['user'][0]->nome ?></button></a>
+                <a href="index.php?p=login&action=sair"> <button class="btn btn-outline-success my-2 my-sm-0" style="color: #ffffffdd" type="submit">Sair</button></a>
+            </ul>
+
+            <?php } else { ?>
+            
+              <ul class="navbar-nav ml-auto">
                 <a href="index.php?p=login"> <button class="btn btn-outline-success my-2 my-sm-0" style="color: #ffffffdd" type="submit">Login</button></a>
                 <a href="index.php?p=dash-user"> <button class="btn btn-outline-success my-2 my-sm-0" style="color: #ffffffdd" type="submit">Dash</button></a>
             </ul>
 
+            <?php } ?>
         </div>
     </nav>
 </section>

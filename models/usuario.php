@@ -45,15 +45,15 @@ class Usuario
     }
 
 
-    public function login($pws, $email)
+    public function login($email, $pws)
     {
         try {
-            $pass = md5($pws, $email);
+            //$pass = md5($pws, $email);
             $dao = new DAO;
             $sql = "SELECT * FROM usuario WHERE email = :email AND pws = :senha ";
             $stman = $dao->conecta()->prepare($sql);
             $stman->bindParam(":email", $email);
-            $stman->bindParam(":senha", $pass);
+            $stman->bindParam(":senha", $pws);
             $stman->execute();
             $result = $stman->fetchAll();
             return $result;
@@ -67,7 +67,8 @@ class Usuario
         try {
             $date = date("Y-m-d", strtotime($this->datanasc));
             //$pass = crypt($this->pws, $this->email);
-            $pass = md5($this->pws, $this->email);
+            //$pass = md5($this->pws, $this->email);
+            $pass = $this->pws;
             $dao = new DAO;
             $sql = "INSERT into usuario(nome, email, tel, ativo, pws, datanasc) VALUES (:nome, :email, :tel, :ativo, :senha, :datanasc)";
             $stman = $dao->conecta()->prepare($sql);

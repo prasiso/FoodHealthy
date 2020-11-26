@@ -18,7 +18,9 @@ require_once("./models/usuario.php");
 require_once("./pages/page-message.php");
 $usuario = new Usuario;
 
-if (!empty($_POST)) {
+$method = $_SERVER["REQUEST_METHOD"];
+
+if ($method === "POST") {
     switch ($_POST["action"]) {
         case "cad":
             cadastro();
@@ -27,12 +29,25 @@ if (!empty($_POST)) {
         case "log":
             entrar();
             break;
-
+            
         default:
-            echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php';</script>";
+            echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php';</script>";
             break;
     }
 }
+
+if ($method === "GET") {
+    switch ($_GET["action"]) {
+        case "sair":
+            sair();
+            break;
+
+        default:
+            echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php';</script>";
+            break;
+    }
+}
+
 /* function validar(){
 
 } */
@@ -63,12 +78,10 @@ function entrar()
     $email = $_POST['email'];
     $pws = $_POST['pws'];
     try {
-        $result = $usuario->login($email, $pws);
-        var_dump($email, $pws);
-        session_start();
+        $result = $usuario->login($email, $pws);      
         if ($result) {
             $_SESSION["user"] = $result;
-            echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
+            //echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
         } else {
             session_destroy();
         }
@@ -76,4 +89,10 @@ function entrar()
     } catch (Exception $erro) {
         error($erro->getMessage());
     }
+}
+
+function sair(){
+    session_destroy();
+     echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
+
 }
