@@ -1,6 +1,6 @@
 <header>
     <div class="pt-5">
-        <img src="img/logo(header2).png" alt="" class="img-fluid p-3 ">
+        <img src="img/logo_header.png" alt="" class="img-fluid p-3 ">
     </div>
 
 </header>
@@ -9,7 +9,7 @@
 
     <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
         <a class="navbar-brand" href="index.php?p=inicio">
-            <img src="img/adada.png" width="45" height="45" alt="">
+            <img src="img/logo_icon.png" width="45" height="45" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

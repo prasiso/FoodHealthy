@@ -18,9 +18,9 @@
             <hr class="clearfix w-100 d-md-none pb-3">
 
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
+            <!-- <div class="col-md-3 mb-md-0 mb-3">
 
-                <!-- Links -->
+                Links
                 <h5 class="text-uppercase">Contato</h5>
 
                 <ul class="list-unstyled">
@@ -29,7 +29,7 @@
                     </li>
                 </ul>
 
-            </div>
+            </div> -->
             <!-- Grid column -->
         </div>
         <!-- Grid row -->

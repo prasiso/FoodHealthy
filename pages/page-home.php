@@ -9,7 +9,7 @@
           <div class="carousel-inner rounded-top">
             <div class="carousel-item active">
               <a href="index.php?p=prato&action=Action"> 
-              <img src="img2/vegano.jpeg" class="d-block w-100 " alt="...">
+              <img src="img/vegano.jpeg" class="d-block w-100 " alt="...">
               </a>
               <div class="carousel-caption d-none d-md-block ">
                 <h5>Pratos da culinária vegana</h5>
@@ -18,7 +18,7 @@
             </div>
             <div class="carousel-item"> 
               <a href="index.php?p=prato&action=Action"> 
-              <img src="img2/vegetariana.jpeg" class="d-block w-100" alt="...">
+              <img src="img/vegetariana.jpeg" class="d-block w-100" alt="...">
               </a>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Pratos da culinária vegetariana</h5>
@@ -27,7 +27,7 @@
             </div>
             <div class="carousel-item">
               <a href="index.php?p=prato&action=Action"> 
-              <img src="img2/grade2.png" class="d-block w-100" alt="...">
+              <img src="img/pratos_saúdaveis.png" class="d-block w-100" alt="...">
               </a>
               <div class="carousel-caption d-none d-md-block">
                 <h4>Pratos saúdaveis</h4>
@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col-md-4 col-12">
       <div class="card " >
-        <img src="img2/suco da fruta 2.jfif" class="card-img-top" alt="...">
+        <img src="img/suco_da_fruta.jfif" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Sucos da fruta</h5>
           <p class="card-text">Os sucos de fruta energizam e limpam o organismo. Eles são ricos em açúcares naturais e,
@@ -63,7 +63,7 @@
       </div>
       <div class="col-md-4 col-12">
       <div class="card ">
-        <img src="img2/suco detox.jpeg " class="card-img-top" alt="...">
+        <img src="img/suco_detox.jpeg " class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Sucos detox</h5>
           <p class="card-text">Os sucos detox ajudam a emagrecer e limpar o organismo porque têm poucas calorias e são
@@ -77,7 +77,7 @@
       </div>
       <div class="col-md-4 col-12">
       <div class="card ">
-        <img src="img2/sucos funcionais.jpeg" class="card-img-top" alt="...">
+        <img src="img/vitaminas_de_fruta.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vitaminas de fruta</h5>
           <p class="card-text">As vitaminas de leite com frutas podem equivaler a uma refeição em termos nutricionais
@@ -101,7 +101,7 @@
             <div class="carousel-inner rounded-top">
               <div class="carousel-item active">
                 <a href="index.php?p=sobremesa"> 
-                <img src="img2/gordura0.jfif" class="d-block w-100 " alt="...">
+                <img src="img/sobremesa_0_gordura.jfif" class="d-block w-100 " alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block ">
                   <h5>Sobremesas 0 gorduras</h5>
@@ -110,7 +110,7 @@
               </div>
               <div class="carousel-item">
                 <a href="index.php?p=sobremesa"> 
-                <img src="img2/flan sem gluten.jfif" class="d-block w-100" alt="...">
+                <img src="img/sobremesa_sem_gluten.jfif" class="d-block w-100" alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Sobremesas sem glutén</h5>
@@ -119,7 +119,7 @@
               </div>
               <div class="carousel-item">
                 <a href="index.php?p=sobremesa"> 
-                <img src="img2/sem lactose.jfif" class="d-block w-100" alt="...">
+                <img src="img/sobremesa_sem_lactose.jfif" class="d-block w-100" alt="...">
                 </a>
                 <div class="carousel-caption d-none d-md-block">
                   <h4>Sobremesas sem lactose</h4>
