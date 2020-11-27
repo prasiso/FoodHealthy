@@ -12,7 +12,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Copiando estrutura do banco de dados para food_healthy
+-- -- Copiando estrutura do banco de dados para food_healthy
 CREATE DATABASE IF NOT EXISTS `food_healthy` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `food_healthy`;
 

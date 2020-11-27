@@ -57,7 +57,7 @@
           <p class="card-text">Os sucos de fruta energizam e limpam o organismo. Eles são ricos em açúcares naturais e,
             por isso, devem ser ingeridos apenas em pequenas quantidades por pessoas que necessitam limitar o consumo do
             açúcar.</p>
-          <a href="index.php?p=bebidas&action=Action" class="btn btn-primary">Ver as opções</a>
+          <a href="index.php?p=bebidas&action=list" class="btn btn-primary">Ver as opções</a>
         </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
             ricos em nutrientes que melhoram o funcionamento do intestino e do fígado. Além disso, esses sucos têm ação
             antioxidante, ajudando a fortalecer o sistema imunológico e são ricos em fibras, que melhoram o trânsito
             intestinal.</p>
-          <a href="index.php?p=bebidas&action=Action" class="btn btn-primary">Ver as opções</a>
+          <a href="index.php?p=bebidas&action=list" class="btn btn-primary">Ver as opções</a>
         </div>
         </div>
   
@@ -83,7 +83,7 @@
           <p class="card-text">As vitaminas de leite com frutas podem equivaler a uma refeição em termos nutricionais
             quando combinadas com aveia e outros ingredientes. Além disso, elas são uma ótima opção para o café da manhã e
             o lanche da tarde.</p>
-          <a href="index.php?p=bebidas&action=Action" class="btn btn-primary">Ver as opções</a>
+          <a href="index.php?p=bebidas&action=list" class="btn btn-primary">Ver as opções</a>
         </div>
       </div>
       </div>

@@ -30,7 +30,7 @@ include_once("./pages/valida-user.php");
             </div>
             <div class="form-group">
                 <label for="exampleInputNome">Valor</label>
-                <input type="number" class="form-control" id="valor" aria-describedby="ValorHelp" placeholder="Valor do Produto" name="valor" required value='<?= $produto->valor ?>'>
+                <input type="number" class="form-control" id="valor" aria-describedby="ValorHelp" placeholder="Valor do Produto" name="valor" step="0.01" min="0.01" required value='<?= $produto->valor ?>'>
                 <small id="ValorHelp" class="form-text text-muted"></small>
             </div>
             <label>

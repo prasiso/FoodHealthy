@@ -18,7 +18,7 @@ require_once("./models/usuario.php");
 require_once("./pages/page-message.php");
 $usuario = new Usuario;
 
-$method = $_SERVER["REQUEST_METHOD"];
+$method = $_SERVER['REQUEST_METHOD'];
 
 if ($method === "POST") {
     switch ($_POST["action"]) {
@@ -29,7 +29,7 @@ if ($method === "POST") {
         case "log":
             entrar();
             break;
-            
+
         default:
             echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php';</script>";
             break;
@@ -37,14 +37,16 @@ if ($method === "POST") {
 }
 
 if ($method === "GET") {
-    switch ($_GET["action"]) {
-        case "sair":
-            sair();
-            break;
+    if (isset($_GET["action"])) {
+        switch ($_GET['action']) {
+            case "sair":
+                sair();
+                break;
 
-        default:
-            echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php';</script>";
-            break;
+            default:
+                echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php';</script>";
+                break;
+        }
     }
 }
 
@@ -66,7 +68,6 @@ function cadastro()
         alerta("Usuario já Cadastrado");
         $usuario = new Usuario;
         echo "<script> this.form.reset();</script>";
-        //echo "<script> window.location.href = 'http://localhost/phpSchool/index.php';</script>";
     } catch (Exception $erro) {
         error($erro->getMessage());
     }
@@ -78,21 +79,20 @@ function entrar()
     $email = $_POST['email'];
     $pws = $_POST['pws'];
     try {
-        $result = $usuario->login($email, $pws);      
+        $result = $usuario->login($email, $pws);
         if ($result) {
             $_SESSION["user"] = $result;
-            //echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
+            echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php?p=dash-user';</script>";
         } else {
             session_destroy();
         }
-        //header("Location: http://localhost/phpSchool/index.php");
     } catch (Exception $erro) {
         error($erro->getMessage());
     }
 }
 
-function sair(){
+function sair()
+{
     session_destroy();
-     echo "<script> window.location.href = 'http://localhost/projetos/FoodHealthy/index.php?p=dash-user';</script>";
-
+    echo "<script> window.location.href = 'http://localhost/FoodHealthy/index.php';</script>";
 }
